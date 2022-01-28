@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bebas Neue', cursive;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(34, 34, 34);
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+}
+
+.darqes {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.darqes a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.darqes a:hover {
+    color: rgb(226, 213, 26);
+    transition: 250ms;
+}
+
+.wrapper-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.wrapper-links li {
+    list-style: none;
+}
+
+.wrapper-links li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 1rem;
+    display: block;
+}
+
+.wrapper-links li a:hover {
+    background: #555;
+    color: rgb(226, 213, 26);
+    transition: 250ms;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.wrapper-links ul li ul {
+    display: none;
+    border-bottom: 2px solid rgb(27, 27, 27);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.wrapper-links ul li ul li {
+    border-top: 2px solid rgb(27, 27, 27);
+}
+
+.wrapper-links ul li:hover ul {
+    display: block;
+    position: absolute;
+    background: #333;
+}
+
+@media (max-width: 400px) {
+    .toggle-button {
+        display: flex;
+    }
+
+    .wrapper-links {
+       display: none; 
+       width: 100%;
+    }
+    
+    .wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .wrapper-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .wrapper-links li {
+        text-align: center;
+    }
+
+    .wrapper-links li a {
+        padding: .5rem 1rem;
+    }
+
+    .wrapper-links.active {
+        display: flex;
+    }
+
+    .wrapper-links ul li ul {
+        display: inherit;
+    }
+
+    .wrapper-links ul li ul a:hover {
+        background: #555;
+    }
+
+    .wrapper-links ul li {
+        border-bottom: 2px solid rgb(27, 27, 27);
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    .wrapper-links ul li ul li {
+        border-bottom: none;
+    }
+}
